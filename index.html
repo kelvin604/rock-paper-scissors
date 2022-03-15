@@ -44,6 +44,59 @@
                 return false
             }
         }
+        
+      
+
+        function game() {
+            let userScore = 0;
+            let computerScore = 0;
+            let count = 0;
+            
+
+            for(let x = 0; x < 5; x++)
+            {
+            let userPlay;
+
+            do{
+            userPlay = prompt("rock paper or scissors?");
+            userPlay = userPlay.toLowerCase();
+            
+            } while(userPlay !== "rock" && userPlay !== "paper" && userPlay !== "scissors");
+
+            let result = playRound(userPlay, computerPlay());
+
+            switch (result){
+                case false: 
+                computerScore += 1;
+                break;
+
+                case true:
+                userScore += 1;
+
+                default:
+                    break;
+            }
+
+            console.log(userScore);
+            console.log(computerScore);
+            }
+            
+            if(userScore > computerScore)
+            {
+                console.log("You Win!");
+            }
+            else if (computerScore > userScore)
+            {
+                console.log("Computer Wins");
+            }
+            else
+            {
+                console.log("Tie");
+            }
+
+        }
+
+        
     </script>
 
 </head>
