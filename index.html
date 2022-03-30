@@ -26,7 +26,6 @@
 
         let compScore = 0;
         let usrScore = 0;
-        let ties = 0;
         let rounds = 0;
 
         function playRound(playerSelection, computerSelection) {
@@ -54,7 +53,6 @@
 
             if (playerSelection === computerSelection)
             {
-                ties += 1;
                 results.textContent = `Tie! ${playerSelection} vs ${computerSelection} USER ${usrScore} COMP ${compScore}`;    
             }
             if(playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock")
